@@ -1,14 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image '10.150.0.131/bitdevops/node:lts-buster-slim' 
-            args '-p 3000:3000' 
-        }
-    }
+ 
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+				sh 'sudo docker pull 10.150.0.131/bitdevops/node:lts-buster-slim'
+                sh 'sudo npm install' 
             }
         }
     }
