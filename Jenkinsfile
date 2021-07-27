@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:lts-buster-slim' 
+            image '10.150.0.131/bitdevops/node:lts-buster-slim' 
             args '-p 3000:3000' 
         }
     }
